@@ -17,7 +17,8 @@ import {
   Message,
   Payment,
   Event,
-  MoreVert
+  MoreVert,
+  Person
 } from '@mui/icons-material';
 import { motion } from 'framer-motion';
 import { format } from 'date-fns';
@@ -31,7 +32,6 @@ interface Activity {
   status: 'completed' | 'pending' | 'cancelled';
   user?: {
     name: string;
-    avatar?: string;
   };
   action?: {
     label: string;
@@ -49,8 +49,7 @@ export function ActivityTimeline() {
       timestamp: new Date('2025-03-03T10:00:00'),
       status: 'completed',
       user: {
-        name: 'John Smith',
-        avatar: '/avatars/john.jpg'
+        name: 'John Smith'
       }
     },
     {
@@ -84,8 +83,7 @@ export function ActivityTimeline() {
       timestamp: new Date('2025-03-03T08:45:00'),
       status: 'completed',
       user: {
-        name: 'Sarah',
-        avatar: '/avatars/sarah.jpg'
+        name: 'Sarah'
       },
       action: {
         label: 'View',
@@ -220,11 +218,8 @@ export function ActivityTimeline() {
                 <Box display="flex" alignItems="center" gap={2} mt={1}>
                   {activity.user && (
                     <Box display="flex" alignItems="center" gap={1}>
-                      <Avatar
-                        src={activity.user.avatar}
-                        sx={{ width: 24, height: 24 }}
-                      >
-                        {activity.user.name[0]}
+                      <Avatar sx={{ width: 24, height: 24 }}>
+                        <Person fontSize="small" />
                       </Avatar>
                       <Typography variant="body2" color="text.secondary">
                         {activity.user.name}

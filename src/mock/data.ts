@@ -4,7 +4,6 @@ export const caregivers: Caregiver[] = [
   {
     id: '1',
     name: 'Sarah Thompson',
-    profileImage: '/caregivers/sarah.jpg',
     specializations: ['personal_care', 'medical_assistance', 'mobility_support'],
     experience: 8,
     rating: 4.9,
@@ -42,7 +41,6 @@ export const caregivers: Caregiver[] = [
   {
     id: '2',
     name: 'James Wilson',
-    profileImage: '/caregivers/james.jpg',
     specializations: ['specialized_care', 'medical_assistance', 'companionship'],
     experience: 12,
     rating: 4.8,
