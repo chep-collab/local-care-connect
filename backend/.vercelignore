@@ -1,0 +1,3 @@
+echo node_modules > .vercelignore
+echo dist >> .vercelignore
+echo .env >> .vercelignore
