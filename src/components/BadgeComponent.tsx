@@ -1,20 +1,22 @@
+import React from 'react';
 import { Chip, styled } from '@mui/material';
 
 const BadgeContainer = styled('div')(({ theme }) => ({
-  display: 'flex', gap: theme.spacing(1), flexWrap: 'wrap',
-  background: theme.palette.background.paper,
-  padding: theme.spacing(2),
-  borderRadius: '10px',
   marginTop: theme.spacing(2),
-  [theme.breakpoints.down('sm')]: { gap: theme.spacing(0.5) },
+  textAlign: 'center',
 }));
 
 const BadgeComponent = ({ points }: { points: number }) => {
-  const badges = points > 100 ? ['Gold'] : points > 50 ? ['Silver'] : [];
+  console.log('BadgeComponent is rendering');
+  const badge = points > 100 ? 'Gold' : points > 50 ? 'Silver' : 'Bronze';
+
   return (
     <BadgeContainer>
-      <h3>Achievements</h3>
-      {badges.map((badge) => <Chip key={badge} label={badge} color="primary" />)}
+      <Chip
+        label={`Local Care Award: ${badge} Badge (${points} points)`}
+        color={points > 100 ? 'warning' : points > 50 ? 'secondary' : 'default'}
+        sx={{ fontSize: '1.1rem', padding: '8px 16px', color: '#333' }}
+      />
     </BadgeContainer>
   );
 };

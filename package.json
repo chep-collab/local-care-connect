@@ -4,27 +4,34 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port 3007",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emotion/react": "11.11.1",
-    "@emotion/styled": "11.11.0",
-    "@mui/icons-material": "5.14.3",
-    "@mui/material": "5.14.3",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^6.4.7",
+    "@mui/material": "^6.4.7",
+    "@mui/x-date-pickers": "^7.27.3",
+    "axios": "^1.8.2",
     "date-fns": "2.30.0",
     "framer-motion": "10.15.0",
     "react": "18.2.0",
+    "react-calendar": "^5.1.0",
     "react-dom": "18.2.0",
     "react-router-dom": "^7.3.0",
+    "socket.io": "^4.8.1",
     "socket.io-client": "^4.8.1"
   },
   "devDependencies": {
+    "@types/mongoose": "^5.11.97",
     "@types/react": "18.2.15",
     "@types/react-dom": "18.2.7",
+    "@types/socket.io": "^3.0.2",
     "@vitejs/plugin-react": "4.0.3",
-    "typescript": "5.0.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.0.2",
     "vite": "^4.4.5"
   }
 }

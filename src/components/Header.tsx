@@ -1,74 +1,28 @@
 import React from 'react';
-import { AppBar, Box, Button, Container, Toolbar, Typography, IconButton, Menu, MenuItem, useMediaQuery, useTheme } from '@mui/material';
-import { Link as RouterLink, useNavigate } from 'react-router-dom';
-import MenuIcon from '@mui/icons-material/Menu';
+import { AppBar, Toolbar, Typography, Button, IconButton, styled } from '@mui/material';
+import { Help } from '@mui/icons-material';
 
-const Header = () => {
-  const navItems = ['Dashboard', 'Services', 'Contact'];
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const navigate = useNavigate();
+const StyledAppBar = styled(AppBar)(({ theme }) => ({
+  background: 'linear-gradient(45deg, #1a237e 30%, #283593 90%)',
+}));
 
-  const handleMenuClose = () => {
-    setAnchorEl(null);
-  };
-
-  const handleMenuClick = (path: string) => {
-    navigate(path);
-    handleMenuClose();
-  };
-
-  return (
-    <AppBar position="static" sx={{ background: 'transparent', backdropFilter: 'blur(10px)' }}>
-      <Container>
-        <Toolbar>
-          <Typography variant="h6" component={RouterLink} to="/" sx={{ color: 'primary.main', textDecoration: 'none' }}>
-            Local Care Connect
-          </Typography>
-          {isMobile ? (
-            <IconButton color="inherit" onClick={(e) => setAnchorEl(e.currentTarget)} aria-label="Open menu">
-              <MenuIcon />
-            </IconButton>
-          ) : (
-            <Box sx={{ flexGrow: 1, display: 'flex', gap: 2 }}>
-              {navItems.map((item) => (
-                <Button
-                  key={item}
-                  component={RouterLink}
-                  to={`/${item.toLowerCase()}`}
-                  color="inherit"
-                  aria-label={`Navigate to ${item}`}
-                >
-                  {item}
-                </Button>
-              ))}
-            </Box>
-          )}
-          <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleMenuClose}>
-            {navItems.map((item) => (
-              <MenuItem key={item} onClick={() => handleMenuClick(`/${item.toLowerCase()}`)}>
-                {item}
-              </MenuItem>
-            ))}
-          </Menu>
-        </Toolbar>
-      </Container>
-    </AppBar>
-  );
-};
-// In src/components/Header.tsx
 const Header = () => {
   console.log('Header is rendering');
-  // ... rest of the code
+  return (
+    <StyledAppBar position="static">
+      <Toolbar>
+        <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: '#ffffff' }}>
+          Local Care Connect
+        </Typography>
+        <Button color="inherit" sx={{ color: '#ffffff' }}>Dashboard</Button>
+        <Button color="inherit" sx={{ color: '#ffffff' }}>Services</Button>
+        <Button color="inherit" sx={{ color: '#ffffff' }}>Contact</Button>
+        <IconButton color="inherit" onClick={() => alert('Welcome to Local Care Connect! Select a service, book an appointment, or chat with a caregiver.')}>
+          <Help sx={{ color: '#ffffff' }} />
+        </IconButton>
+      </Toolbar>
+    </StyledAppBar>
+  );
 };
 
-// In src/components/AppointmentManager.tsx
-const AppointmentManager = () => {
-  console.log('AppointmentManager is rendering');
-  // ... rest of the code
-};
-
-// Repeat for Chat, ServiceSelector, ProfileCard, BadgeComponent
 export default Header;
-
