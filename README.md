@@ -51,7 +51,7 @@ A modern, responsive web application that connects caregivers with patients, bui
    npm run dev
    ```
 
-5. Open [http://localhost:3000](http://localhost:3000) in your browser
+5. Open [http://localhost:3007](http://localhost:3007) in your browser
 
 ## 📱 Key Components
 
