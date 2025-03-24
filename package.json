@@ -1,108 +1,37 @@
 {
-  
-  "homepage": "https://chep-collab.github.io/local-care-connect",
-  
   "name": "local-care-connect",
-  
   "private": true,
-  
   "version": "0.1.0",
-  
   "type": "module",
-  
   "scripts": {
-  
-    
-  "dev": "vite",
-  
-    
-  "build": "vite build",
-  
-    
-  "preview": "vite preview",
-  
-    
-  "predeploy": "npm run build",
-  
-    
-  "deploy": "gh-pages -d dist"
-  
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  
   "dependencies": {
-  
-    
-  "@emotion/react": "^11.14.0",
-  
-    
-  "@emotion/styled": "^11.14.0",
-  
-    
-  "@mui/icons-material": "^6.4.7",
-  
-    
-  "@mui/material": "^6.4.7",
-  
-    
-  "@mui/x-date-pickers": "^7.27.3",
-  
-    
-  "axios": "^1.8.2",
-  
-    
-  "date-fns": "2.30.0",
-  
-    
-  "framer-motion": "10.15.0",
-  
-    
-  "react": "18.2.0",
-  
-    
-  "react-calendar": "^5.1.0",
-  
-    
-  "react-dom": "18.2.0",
-  
-    
-  "react-router-dom": "^7.3.0",
-  
-    
-  "socket.io": "^4.8.1",
-  
-    
-  "socket.io-client": "^4.8.1"
-  
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^6.4.7",
+    "@mui/material": "^6.4.7",
+    "@mui/x-date-pickers": "^7.27.3",
+    "axios": "^1.8.2",
+    "date-fns": "2.30.0",
+    "framer-motion": "10.15.0",
+    "react": "18.2.0",
+    "react-calendar": "^5.1.0",
+    "react-dom": "18.2.0",
+    "react-router-dom": "^7.3.0",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1"
   },
-  
   "devDependencies": {
-  
-    
-  "@types/mongoose": "^5.11.97",
-  
-    
-  "@types/react": "18.2.15",
-  
-    
-  "@types/react-dom": "18.2.7",
-  
-    
-  "@types/socket.io": "^3.0.2",
-  
-    
-  "@vitejs/plugin-react": "4.0.3",
-  
-    
-  "gh-pages": "^6.3.0",
-  
-    
-  "ts-node": "^10.9.2",
-  
-    
-  "typescript": "^5.0.2",
-  
-    
-  "vite": "^4.4.5"
-  
+    "@types/mongoose": "^5.11.97",
+    "@types/react": "18.2.15",
+    "@types/react-dom": "18.2.7",
+    "@types/socket.io": "^3.0.2",
+    "@vitejs/plugin-react": "4.0.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
   }
 }

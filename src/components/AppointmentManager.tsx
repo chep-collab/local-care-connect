@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Button, TextField, Card, CardContent, Typography, styled, IconButton, Box, InputAdornment } from '@mui/material';
+import { Button, TextField, Card, CardContent, Typography, styled, IconButton, Box, InputAdornment, useTheme } from '@mui/material'; // Added useTheme
 import { Delete, Search as SearchIcon } from '@mui/icons-material';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
@@ -65,6 +65,7 @@ interface Appointment {
 }
 
 const AppointmentManager = () => {
+  const theme = useTheme(); // Added to access the theme
   const [client, setClient] = useState('');
   const [time, setTime] = useState('');
   const [appointments, setAppointments] = useState<Appointment[]>([]);

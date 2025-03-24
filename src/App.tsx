@@ -115,6 +115,14 @@ const NavLink = styled(Link)(({ theme }) => ({
   },
 }));
 
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+};
+
 const App = () => {
   const location = useLocation(); // For active link styling
 
@@ -155,7 +163,8 @@ const Home = () => (
 );
 
 export default () => (
-  <Router>
+  <Router basename="/">
+    <ScrollToTop />
     <App />
   </Router>
 );
