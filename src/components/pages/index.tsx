@@ -1,11 +1,12 @@
 // pages/index.tsx
 import AppointmentForm from '../components/AppointmentForm';
+import StatisticsCards from '../components/StatisticsCards';
 
 export default function Home() {
   return (
     <div>
       <AppointmentForm />
-      {/* Add your Community Overview section below */}
+      <StatisticsCards />
     </div>
   );
 }
