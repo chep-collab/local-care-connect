@@ -1,8 +1,8 @@
 # LocalCareConnect - Healthcare Platform
 
 A modern, responsive web application that connects caregivers with patients, built with Next.js 13, Material-UI, and real-time features.
+https://local-care-connect-5hzc.vercel.app/
 
-![LocalCareConnect Screenshot](./public/screenshot.png)
 
 ## 🌟 Features
 
